@@ -116,15 +116,15 @@ const database = {
         }, {
             id: 3,
             name: "Yousuf Orozco",
-            locationId: 2
+            locationId: 3
         }, {
             id: 4,
             name: "Elsie Strickland",
-            locationId: 3
+            locationId: 4
         }, {
             id: 5,
             name: "Justin Acevedo",
-            locationId: 3
+            locationId: 5
         }, {
             id: 6,
             name: "Jacques O'Sullivan",
@@ -132,19 +132,19 @@ const database = {
         }, {
             id: 7,
             name: "Elmer Clark",
-            locationId: 2
+            locationId: 7
         }, {
             id: 8,
             name: "Tyrese Mack",
-            locationId: 4
+            locationId: 8
         }, {
             id: 9,
             name: "Doris Lyons",
-            locationId: 5
+            locationId: 9
         }, {
             id: 10,
             name: "Aayan Cantrell",
-            locationId: 6
+            locationId: 10
         },
     ],
     locationAttractions: [
