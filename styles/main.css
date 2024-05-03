@@ -21,6 +21,9 @@ h1,h2,h3,h4,h5,h6 {
 
 header {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 footer {
@@ -28,9 +31,11 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    padding: 2em;
 }
 
 footer h5, h4 {
     text-align: center;
     color: honeydew;
+    margin: 3px;
 }
