@@ -9,19 +9,24 @@ const findAttractionsForService = (serviceName) => {
     const service = services.find(service => service.name === serviceName);
     if (!service) return [];
 
-    const locationsOfferingService = locationServices
+    // Find location IDs where this service is offered.
+    const locationIds = locationServices
         .filter(ls => ls.serviceId === service.id)
         .map(ls => ls.locationId);
 
-    const attractionsOfferingService = locationAttractions
-        .filter(la => locationsOfferingService.includes(la.locationId))
-        .map(la => {
-            const attraction = attractions.find(attraction => attraction.id === la.attractionId);
-            return attraction ? attraction.name : undefined;
-        })
-        .filter(attractionName => attractionName !== undefined);
-    
-    return attractionsOfferingService;
+    // Find attractions linked to these locations.
+    const attractionIds = locationAttractions
+        .filter(la => locationIds.includes(la.locationId))
+        .map(la => la.attractionId);
+
+    // Get unique attraction IDs to avoid duplicates.
+    const uniqueAttractionIds = [...new Set(attractionIds)];
+
+    // Map the unique attraction IDs to their names.
+    return uniqueAttractionIds.map(id => {
+        const attraction = attractions.find(attraction => attraction.id === id);
+        return attraction ? attraction.name : undefined;
+    }).filter(name => name); // Remove undefined entries if any.
 };
 
 document.addEventListener("click", (clickEvent) => {
