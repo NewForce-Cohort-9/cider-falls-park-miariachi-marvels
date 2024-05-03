@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Alfa+Slab+One&family=Yeseva+One&display=swap");
+
+/*Typography
+--------------------------------------------------------------*/
+body,
+button,
+input,
+select,
+textarea {
+	color: #404040;
+	font-family: "Comfortaa", Arial, sans-serif;
+	font-size: 14px;
+	line-height: 1.5;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: "Yeseva One", serif;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+header {
+    text-align: center;
+}
+
+footer {
+    background-color: darkgreen;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+footer h5, h4 {
+    text-align: center;
+    color: honeydew;
+}
