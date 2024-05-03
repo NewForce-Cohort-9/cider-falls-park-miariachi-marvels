@@ -112,7 +112,7 @@ const database = {
         }, {
             id: 2,
             name: "Ajay Finch",
-            locationId: 6
+            locationId: 1
         }, {
             id: 3,
             name: "Yousuf Orozco",
