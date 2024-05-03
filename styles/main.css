@@ -1,3 +1,4 @@
+@import "./details.css";
 @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Alfa+Slab+One&family=Yeseva+One&display=swap");
 
 /*Typography
@@ -17,6 +18,7 @@ h1,h2,h3,h4,h5,h6 {
     font-family: "Yeseva One", serif;
     font-weight: 400;
     letter-spacing: 2px;
+    color: #404040;
 }
 
 header {
