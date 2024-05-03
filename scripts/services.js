@@ -4,7 +4,7 @@ const locations = getLocations();
 const locationServices = getLocationServices();
 const services = getServices();
 
-// Helper function to find parks by services
+// Helper function to identify and return the names of locations where a service is available
 const findLocationsForService = (serviceName) => {
     const service = services.find(service => service.name === serviceName);
     const locationsWithService = locationServices.filter(ls => ls.serviceId === service.id)
