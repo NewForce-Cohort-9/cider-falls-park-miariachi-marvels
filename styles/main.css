@@ -39,3 +39,18 @@ footer h5, h4 {
     color: honeydew;
     margin: 3px;
 }
+
+#container {
+    display: flex;
+}
+
+.attractions {
+    display: flex;
+    justify-content: left;
+}
+
+.guests {
+    display: flex;
+    justify-content: right;
+    font-size: 1rem;
+}
