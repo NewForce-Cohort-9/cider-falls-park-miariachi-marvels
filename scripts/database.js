@@ -4,19 +4,19 @@ const database = {
             id: 1,
             name: "Location Name"
         }, {
-            id: 1,
+            id: 2,
             name: "Location Name"
         }, {
-            id: 1,
+            id: 3,
             name: "Location Name"
         }, {
-            id: 1,
+            id: 4,
             name: "Location Name"
         }, {
-            id: 1,
+            id: 5,
             name: "Location Name"
         }, {
-            id: 1,
+            id: 6,
             name: "Location Name"
         },      
     ],
