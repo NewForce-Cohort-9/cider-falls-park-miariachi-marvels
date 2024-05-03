@@ -8,8 +8,8 @@ const guests = getGuests()
 
 const attractionGuests = (id) => {
     let guestsPresent = 0;
-    for (const attraction of attractions) {
-        if (attraction.locationId === id){
+    for (const guest of guests) {
+        if (guest.locationId === id){
             guestsPresent++;
     }
     }
@@ -31,7 +31,10 @@ document.addEventListener("click", (clickEvent) => {
 export const Attractions = () => {
     let attractionsHTML = "<ol>";
     for (const attraction of attractions) {
-        attractionsHTML += `<li data-id="${attraction.id}">${attraction.name}</li>`
+        attractionsHTML += `<li
+        data-type="attraction"
+        data-id="${attraction.id}"
+        >${attraction.name}</li>`
         }
         attractionsHTML += "</ol>"
         return attractionsHTML
