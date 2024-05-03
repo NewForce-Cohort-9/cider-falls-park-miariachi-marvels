@@ -107,43 +107,43 @@ const database = {
     guests: [
         {
             id: 1,
-            name: "Name Here",
+            name: "Bessie Richardson",
             locationId: 1
         }, {
             id: 2,
-            name: "Name Here",
+            name: "Ajay Finch",
             locationId: 1
         }, {
             id: 3,
-            name: "Name Here",
+            name: "Yousuf Orozco",
             locationId: 1
         }, {
             id: 4,
-            name: "Name Here",
+            name: "Elsie Strickland",
             locationId: 1
         }, {
             id: 5,
-            name: "Name Here",
+            name: "Justin Acevedo",
             locationId: 1
         }, {
             id: 6,
-            name: "Name Here",
+            name: "Jacques O'Sullivan",
             locationId: 1
         }, {
             id: 7,
-            name: "Name Here",
+            name: "Elmer Clark",
             locationId: 1
         }, {
             id: 8,
-            name: "Name Here",
+            name: "Tyrese Mack",
             locationId: 1
         }, {
             id: 9,
-            name: "Name Here",
+            name: "Doris Lyons",
             locationId: 1
         }, {
             id: 10,
-            name: "Name Here",
+            name: "Aayan Cantrell",
             locationId: 1
         },
     ],
