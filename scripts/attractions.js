@@ -1,15 +1,43 @@
-import { getAttractions } from "./database.js";
+import { getServices, getLocations, getAttractions, getGuests } from "./database.js"
 
+const services = getServices()
+const locations = getLocations()
 const attractions = getAttractions()
+const guests = getGuests()
+
+
+const attractionGuests = (id) => {
+    let guestsPresent = 0;
+    for (const guest of guests) {
+        if (guest.locationId === id){
+            guestsPresent++;
+    }
+    }
+    return guestsPresent;
+}
+
+
+document.addEventListener("click", (clickEvent) => {
+    const itemClicked = clickEvent.target;
+
+    if (itemClicked.dataset.type === "attraction") {
+        const attractionId = parseInt(itemClicked.dataset.id);
+        const guestsCount = attractionGuests(attractionId);
+        window.alert(`Number of guests visiting this attraction: ${guestsCount}`);
+    }
+});
+
 
 export const Attractions = () => {
-    let html = "<ul>"
-
+    let attractionsHTML = "<ol>";
     for (const attraction of attractions) {
-        html += `<li data-type="attraction">${attraction.name}</li>`
-    }
+        attractionsHTML += `<li
+        data-type="attraction"
+        data-id="${attraction.id}"
+        >${attraction.name}</li>`
+        }
+        attractionsHTML += "</ol>"
+        return attractionsHTML
+};
 
-    html += "</ul>"
 
-    return html
-}
