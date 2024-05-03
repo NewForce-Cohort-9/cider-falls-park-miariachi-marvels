@@ -1,11 +1,17 @@
-import {getLocations, getGuests, getServices, getAttractions} from "./database.js"
+import {getLocations, getAttractions} from "./database.js"
 
 const locations = getLocations()
-const guests =getGuests()
-const services = getServices()
 const attractions = getAttractions()
 
+export const Attractions =() => {
+    let attractionsHTML = "<ol>";
+    for (const attraction of attractions) {
+        attractionsHTML += `<li data-id="${attraction.id}">${attraction.name}</li>`   
+    }
+    attractionsHTML = "</ol>"
 
+    return attractionsHTML
+};
 
 export const Locations = () => {
     let locationsHTML = "<ol>";
