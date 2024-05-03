@@ -2,22 +2,22 @@ const database = {
     locations: [
         {
             id: 1,
-            name: "Location Name"
+            name: "Northeastern"
         }, {
-            id: 1,
-            name: "Location Name"
+            id: 2,
+            name: "Northern"
         }, {
-            id: 1,
-            name: "Location Name"
+            id: 3,
+            name: "Northwestern"
         }, {
-            id: 1,
-            name: "Location Name"
+            id: 4,
+            name: "Southeastern"
         }, {
-            id: 1,
-            name: "Location Name"
+            id: 5,
+            name: "Southern"
         }, {
-            id: 1,
-            name: "Location Name"
+            id: 6,
+            name: "Southwestern"
         },      
     ],
     attractions: [
@@ -154,15 +154,15 @@ const database = {
             locationId: 2,
             attractionId: 3
         }, {
-            id: 1,
+            id: 2,
             locationId: 2,
             attractionId: 3
         }, {
-            id: 1,
+            id: 3,
             locationId: 2,
             attractionId: 3
         }, {
-            id: 1,
+            id: 4,
             locationId: 2,
             attractionId: 3
         }, {
