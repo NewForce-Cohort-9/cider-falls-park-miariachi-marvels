@@ -7,12 +7,12 @@ import { Locations } from "./locations.js"
 const mainContainer = document.querySelector("#container")
 
 const applicationHTML = `
-<article class="attractions">
-    <sections class="detail--column list attractions__services">
-        <h4>park services</h4>
-        ${Services()}
+ <sections class="services">
+        <p>Park Services: ${Services()}</p>
+        
     </sections>
-    <section class="detail--column list attractions__attractions">
+    <article class="attractions">
+    <section class="list__attractions">
         <h2>Attractions</h2>
         ${Attractions()}
     </section>
