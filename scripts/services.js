@@ -1,42 +1,47 @@
-import { getLocations, getLocationServices, getServices } from "./database.js";
+import { getServices, getAttractions, getLocationServices, getLocationAttractions } from "./database.js";
 
-const locations = getLocations();
-const locationServices = getLocationServices();
 const services = getServices();
+const attractions = getAttractions();
+const locationServices = getLocationServices();
+const locationAttractions = getLocationAttractions();
 
-// Helper function to identify and return the names of locations where a service is available
-const findLocationsForService = (serviceName) => {
+const findAttractionsForService = (serviceName) => {
     const service = services.find(service => service.name === serviceName);
-    const locationsWithService = locationServices.filter(ls => ls.serviceId === service.id)
-        .map(ls => {
-            const location = locations.find(location => location.id === ls.locationId);
-            return location ? location.name : null;
-        }).filter(name => name !== null);
+    if (!service) return [];
 
-    return locationsWithService.length > 0 ? locationsWithService.join(", ") : "No locations listed";
+    const locationsOfferingService = locationServices
+        .filter(ls => ls.serviceId === service.id)
+        .map(ls => ls.locationId);
+
+    const attractionsOfferingService = locationAttractions
+        .filter(la => locationsOfferingService.includes(la.locationId))
+        .map(la => {
+            const attraction = attractions.find(attraction => attraction.id === la.attractionId);
+            return attraction ? attraction.name : undefined;
+        })
+        .filter(attractionName => attractionName !== undefined);
+    
+    return attractionsOfferingService;
 };
 
-/* When a park guest clicks on one of the services, a message should be displayed 
-   show which park areas support that service.
-*/
 document.addEventListener("click", (clickEvent) => {
     const itemClicked = clickEvent.target;
     if (itemClicked.dataset.type === "service") {
-        const serviceId = itemClicked.dataset.id;
-        const service = services.find(service => service.id === serviceId);
-        if (service) {
-            const locations = findLocationsForService(service.name);
-            alert(`Locations with ${service.name}: ${locations}`);
+        const serviceName = itemClicked.textContent;
+        const foundAttractions = findAttractionsForService(serviceName);
+        if (foundAttractions.length > 0) {
+            window.alert(`Attractions offering ${serviceName}: ${foundAttractions.join(", ")}`);
+        } else {
+            window.alert(`No attractions offer ${serviceName}`);
         }
     }
 });
 
-
 export const Services = () => {
     let servicesHTML = "<ol>";
-    services.forEach(service => {
-        servicesHTML += `<li data-type="service" data-id="${service.id}">${service.name}</li>`;
-    });
+    for (const service of services) {
+        servicesHTML += `<li data-type="service">${service.name}</li>`;
+    }
     servicesHTML += "</ol>";
     return servicesHTML;
-}
+};
