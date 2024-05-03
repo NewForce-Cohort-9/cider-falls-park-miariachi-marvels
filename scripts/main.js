@@ -9,7 +9,7 @@ const mainContainer = document.querySelector("#container")
 const applicationHTML = `
 <article class="attractions">
     <sections class="detail--column list attractions__services">
-        <h4>park services</h4>
+        <h2>Park Services</h2>
         ${Services()}
     </sections>
     <section class="detail--column list attractions__attractions">
