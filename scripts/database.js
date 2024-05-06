@@ -2,64 +2,70 @@ const database = {
     locations: [
         {
             id: 1,
-            name: "Northeast Section"
+            name: "Northeast Section",
+            mainAttraction: "Chamfort River"
         }, {
             id: 2,
-            name: "Northern Section"
+            name: "Northern Section",
+            mainAttraction: "Lost Wolf Hiking Trail",
         }, {
             id: 3,
-            name: "Northwest Section"
+            name: "Northwest Section",
+            mainAttraction: "Lodge",
         }, {
             id: 4,
-            name: "Southwest Section"
+            name: "Southwest Section",
+            mainAttraction: "Gander River"
         }, {
             id: 5,
-            name: "Southern Section"
+            name: "Southern Section",
+            mainAttraction: "Campgrounds",
         }, {
             id: 6,
-            name: "Southeast Section"
+            name: "Southeast Section",
+            mainAttraction: "Pine Bluffs Trail"
         },      
     ],
     attractions: [
-        {
-            id: 1,
-            name: "Chamfort River"
-
-        }, {
-            id: 2,
-            name: "Lost Wolf Hiking Trail"
-
-        }, {
-            id: 3,
-            name: "Lodge"
+        // {
+        //     id: 1,
+        //     name: "Chamfort River"
 
         // }, {
-        //     id: 4,
-        //     name: "Hotel"
+        //     id: 2,
+        //     name: "Lost Wolf Hiking Trail"
 
         // }, {
-        //     id: 5,
-        //     name: "Restaurant"
+        //     id: 3,
+        //     name: "Lodge"
+
+         {
+            id: 4,
+            name: "Hotel"
 
         }, {
-            id: 6,
-            name: "Gander River"
-
-        }, {
-            id: 7,
-            name: "Campgrounds"
+            id: 5,
+            name: "Restaurant"
 
         // }, {
-        //     id: 8,
-        //     name: "Office Park"
+        //     id: 6,
+        //     name: "Gander River"
 
         // }, {
-        //     id: 9,
-        //     name: "Children's Play Area"
+        //     id: 7,
+        //     name: "Campgrounds"
 
         }, {
-            id: 10,
-            name: "Pine Bluffs Trail"
+            id: 8,
+            name: "Office Park"
+
+        }, {
+            id: 9,
+            name: "Children's Play Area"
+
+        // }, {
+        //     id: 10,
+        //     name: "Pine Bluffs Trail"
 
         },
     ],
@@ -124,7 +130,7 @@ const database = {
         }, {
             id: 5,
             name: "Justin Acevedo",
-            locationId: 2
+            locationId: 3
         }, {
             id: 6,
             name: "Jacques O'Sullivan",
@@ -132,7 +138,7 @@ const database = {
         }, {
             id: 7,
             name: "Elmer Clark",
-            locationId: 7
+            locationId: 5
         }, {
             id: 8,
             name: "Tyrese Mack",
@@ -144,7 +150,7 @@ const database = {
         }, {
             id: 10,
             name: "Aayan Cantrell",
-            locationId: 10
+            locationId: 3
         },
     ],
     locationAttractions: [
