@@ -2,38 +2,44 @@ const database = {
     locations: [
         {
             id: 1,
-            name: "Northeast Section"
+            name: "Northeast Section",
+            mainAttraction: "Chamfort River"
         }, {
             id: 2,
-            name: "Northern Section"
+            name: "Northern Section",
+            mainAttraction: "Lost Wolf Hiking Trail",
         }, {
             id: 3,
-            name: "Northwest Section"
+            name: "Northwest Section",
+            mainAttraction: "Lodge",
         }, {
             id: 4,
-            name: "Southwest Section"
+            name: "Southwest Section",
+            mainAttraction: "Gander River"
         }, {
             id: 5,
-            name: "Southern Section"
+            name: "Southern Section",
+            mainAttraction: "Campgrounds",
         }, {
             id: 6,
-            name: "Southeast Section"
+            name: "Southeast Section",
+            mainAttraction: "Pine Bluffs Trail"
         },      
     ],
     attractions: [
-        {
-            id: 1,
-            name: "Chamfort River"
+        // {
+        //     id: 1,
+        //     name: "Chamfort River"
 
-        }, {
-            id: 2,
-            name: "Lost Wolf Hiking Trail"
+        // }, {
+        //     id: 2,
+        //     name: "Lost Wolf Hiking Trail"
 
-        }, {
-            id: 3,
-            name: "Lodge"
+        // }, {
+        //     id: 3,
+        //     name: "Lodge"
 
-        }, {
+         {
             id: 4,
             name: "Hotel"
 
@@ -41,13 +47,13 @@ const database = {
             id: 5,
             name: "Restaurant"
 
-        }, {
-            id: 6,
-            name: "Gander River"
+        // }, {
+        //     id: 6,
+        //     name: "Gander River"
 
-        }, {
-            id: 7,
-            name: "Campgrounds"
+        // }, {
+        //     id: 7,
+        //     name: "Campgrounds"
 
         }, {
             id: 8,
@@ -57,9 +63,9 @@ const database = {
             id: 9,
             name: "Children's Play Area"
 
-        }, {
-            id: 10,
-            name: "Pine Bluffs Trail"
+        // }, {
+        //     id: 10,
+        //     name: "Pine Bluffs Trail"
 
         },
     ],
@@ -120,11 +126,11 @@ const database = {
         }, {
             id: 4,
             name: "Elsie Strickland",
-            locationId: 4
+            locationId: 2
         }, {
             id: 5,
             name: "Justin Acevedo",
-            locationId: 5
+            locationId: 3
         }, {
             id: 6,
             name: "Jacques O'Sullivan",
@@ -132,19 +138,19 @@ const database = {
         }, {
             id: 7,
             name: "Elmer Clark",
-            locationId: 7
+            locationId: 5
         }, {
             id: 8,
             name: "Tyrese Mack",
-            locationId: 8
+            locationId: 3
         }, {
             id: 9,
             name: "Doris Lyons",
-            locationId: 9
+            locationId: 3
         }, {
             id: 10,
             name: "Aayan Cantrell",
-            locationId: 10
+            locationId: 3
         },
     ],
     locationAttractions: [
@@ -163,16 +169,16 @@ const database = {
             locationId: 3,
             attractionId: 3
             //Lodge in Northern Section
-        }, {
-            id: 4,
-            locationId: 3,
-            attractionId: 4,
-            //Hotel in Northern Section
-        }, {
-            id: 5,
-            locationId: 3,
-            attractionId: 5,
-            //Restaurant in Northern Section
+        // }, {
+        //     id: 4,
+        //     locationId: 3,
+        //     attractionId: 4,
+        //     //Hotel in Northern Section
+        // }, {
+        //     id: 5,
+        //     locationId: 3,
+        //     attractionId: 5,
+        //     //Restaurant in Northern Section
         }, {
             id: 6,
             locationId: 4,
@@ -183,16 +189,16 @@ const database = {
             locationId: 5,
             attractionId: 7,
             //Campgrounds in Southern Section
-        }, {
-            id: 8,
-            locationId: 5,
-            attractionId: 8,
-            //Office Park in Southern Section
-        }, {
-            id: 9,
-            locationId: 5,
-            attractionId: 9,
-            //Childrens Play Area in Southern Section
+        // }, {
+        //     id: 8,
+        //     locationId: 5,
+        //     attractionId: 8,
+        //     //Office Park in Southern Section
+        // }, {
+        //     id: 9,
+        //     locationId: 5,
+        //     attractionId: 9,
+        //     //Childrens Play Area in Southern Section
         }, {
             id: 10,
             locationId: 6,
