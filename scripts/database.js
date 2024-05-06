@@ -3,27 +3,33 @@ const database = {
         {
             id: 1,
             name: "Northwest Section",
-            mainAttraction: "Lodge"
+            mainAttraction: "Lodge",
+            image: 'https://cdn.pixabay.com/photo/2016/03/27/19/12/nature-1283747_1280.jpg'
         }, {
             id: 2,
             name: "Northern Section",
             mainAttraction: "Lost Wolf Hiking Trail",
+            image: 'https://cdn.pixabay.com/photo/2018/07/15/22/42/doughboy-trail-foot-bridge-3540789_1280.jpg'
         }, {
             id: 3,
             name: "Northeast Section",
             mainAttraction: "Chamfort River",
+            image: 'https://cdn.pixabay.com/photo/2017/06/26/08/53/ingleton-2443106_1280.jpg'
         }, {
             id: 4,
             name: "Southwest Section",
-            mainAttraction: "Gander River"
+            mainAttraction: "Gander River",
+            image: 'https://cdn.pixabay.com/photo/2020/05/04/16/05/mckenzie-river-5129717_1280.jpg'
         }, {
             id: 5,
             name: "Southern Section",
             mainAttraction: "Campgrounds",
+            image: 'https://cdn.pixabay.com/photo/2017/10/07/01/01/bach-leek-2825197_1280.jpg'
         }, {
             id: 6,
             name: "Southeast Section",
-            mainAttraction: "Pine Bluffs Trail"
+            mainAttraction: "Pine Bluffs Trail",
+            image: 'https://cdn.pixabay.com/photo/2016/11/29/07/12/forest-1868028_1280.jpg'
         },      
     ],
     attractions: [

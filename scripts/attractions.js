@@ -32,6 +32,7 @@ export const Attractions = () => {
     let attractionsHTML = "<ol class=`attractions-list`>"
     for (const location of locations) {
         attractionsHTML += `<div class="attraction-card">
+        <li class="attraction-image"><img src="${location.image}"</li>
         <li data-type="mainAttraction"
         data-id="${location.id}"
         >${location.mainAttraction}</li></div>`
