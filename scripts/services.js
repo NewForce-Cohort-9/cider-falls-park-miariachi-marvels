@@ -4,16 +4,12 @@ const services = getServices();
 const locations = getLocations();
 const locationServices = getLocationServices();
 
-console.log('Services:', services);
-console.log('Locations:', locations);
-console.log('Location Services:', locationServices);
-
 // Function to find locations that support a given service name
 const findLocationsForService = (serviceName) => {
-    const service = services.find(s => s.name === serviceName);
+    const service = services.find(service => service.name === serviceName);
     const locationIds = locationServices
-        .filter(ls => ls.serviceId === service.id)
-        .map(ls => ls.locationId);
+        .filter(locationServices => locationServices.serviceId === service.id)
+        .map(locationServices => locationServices.locationId);
 
     const locationNames = locations
         .filter(location => locationIds.includes(location.id))
