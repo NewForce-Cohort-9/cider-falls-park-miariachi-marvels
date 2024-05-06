@@ -28,6 +28,11 @@ header {
     justify-content: center;
 }
 
+header h1 {
+    font-weight: 700;
+    font-size: 64px;
+}
+
 footer {
     background-color: darkgreen;
     display: flex;
