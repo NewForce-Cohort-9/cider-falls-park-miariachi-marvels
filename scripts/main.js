@@ -13,12 +13,12 @@ const applicationHTML = `
 
     <section class="container">
     <section class="list__attractions">
-        <h2>Attractions</h2>
+        <h2 class="attraction-title">Attractions</h2>
         ${Attractions()}
     </section>
 
     <article class="guests">
-        <h2>Current Guests</h2>
+        <h2 class="guest-title">Current Guests</h2>
         ${Guests()}
     </article>
     </section>

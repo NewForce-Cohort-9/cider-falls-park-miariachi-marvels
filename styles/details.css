@@ -25,6 +25,15 @@
     display: flex;
 }
 
+.attraction-title{
+    text-align: center;
+    color: honeydew;
+    background: darkgreen;
+    padding: 10px;
+    width: 200px;
+    height: 25px;
+}
+
 /* .list__atrractions is the Attractions Section on main.js */
 .list__attractions {
     margin: 1rem;
@@ -38,6 +47,7 @@
     display: flex;
     flex-wrap: wrap;
     padding-left: 0;
+    margin: 0;
 }
 
 .list__attractions li {
@@ -59,6 +69,11 @@
     text-align: center;
 }
 
+.attraction-image img {
+    height: 5em;
+    width: auto;
+}
+
 /* .guests is the Guests Section on main.js */
 .guests {
    margin: 1rem;
@@ -66,8 +81,24 @@
    text-align: center;
 }
 .guests ul {
-    padding-left: 0;}
+    padding-left: 0;
+    margin-top: 2em;
+}
 
 .guests li {
+    color: honeydew;
    list-style: none;
+    background: #404040;;
+    padding: 10px;
+    width: 200px;
+    height: 15px;
+   
+}
+
+.guest-title {
+    color: honeydew;
+    background: darkgreen;
+    padding: 10px;
+    width: 200px;
+    height: 25px;
 }
