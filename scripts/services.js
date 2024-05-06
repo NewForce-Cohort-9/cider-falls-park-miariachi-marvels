@@ -1,51 +1,53 @@
-import { getServices, getAttractions, getLocationServices, getLocationAttractions } from "./database.js";
+import { getServices, getLocations, getLocationServices } from "./database.js";
 
 const services = getServices();
-const attractions = getAttractions();
+const locations = getLocations();
 const locationServices = getLocationServices();
-const locationAttractions = getLocationAttractions();
 
-const findAttractionsForService = (serviceName) => {
-    const service = services.find(service => service.name === serviceName);
-    if (!service) return [];
+console.log('Services:', services);
+console.log('Locations:', locations);
+console.log('Location Services:', locationServices);
 
-    // Find location IDs where this service is offered.
+// Function to find locations that support a given service name
+const findLocationsForService = (serviceName) => {
+    const service = services.find(s => s.name === serviceName);
+    if (!service) {
+        console.log(`No service found for: ${serviceName}`);
+        return [];
+    }
+
     const locationIds = locationServices
         .filter(ls => ls.serviceId === service.id)
         .map(ls => ls.locationId);
 
-    // Find attractions linked to these locations.
-    const attractionIds = locationAttractions
-        .filter(la => locationIds.includes(la.locationId))
-        .map(la => la.attractionId);
+    const locationNames = locations
+        .filter(location => locationIds.includes(location.id))
+        .map(location => location.name);
 
-    // Get unique attraction IDs to avoid duplicates.
-    const uniqueAttractionIds = [...new Set(attractionIds)];
-
-    // Map the unique attraction IDs to their names.
-    return uniqueAttractionIds.map(id => {
-        const attraction = attractions.find(attraction => attraction.id === id);
-        return attraction ? attraction.name : undefined;
-    }).filter(name => name); // Remove undefined entries if any.
+    console.log(`Locations for ${serviceName}:`, locationNames);
+    return locationNames;
 };
 
-document.addEventListener("click", (clickEvent) => {
-    const itemClicked = clickEvent.target;
-    if (itemClicked.dataset.type === "service") {
-        const serviceName = itemClicked.textContent;
-        const foundAttractions = findAttractionsForService(serviceName);
-        if (foundAttractions.length > 0) {
-            window.alert(`Attractions offering ${serviceName}: ${foundAttractions.join(", ")}`);
-        } else {
-            window.alert(`No attractions offer ${serviceName}`);
+document.addEventListener("DOMContentLoaded", () => {
+    document.body.innerHTML += Services(); // Append the services list to the body
+    document.getElementById('services-list').addEventListener('click', (event) => {
+        const target = event.target;
+        if (target.tagName === 'LI' && target.dataset.type === "service") {
+            const serviceName = target.textContent;
+            const supportingLocations = findLocationsForService(serviceName);
+            if (supportingLocations.length > 0) {
+                window.alert(`Locations offering ${serviceName}: ${supportingLocations.join(", ")}`);
+            } else {
+                window.alert(`No locations offer ${serviceName}`);
+            }
         }
-    }
+    });
 });
 
 export const Services = () => {
-    let servicesHTML = "<ol>";
+    let servicesHTML = "<ol id='services-list'>";
     for (const service of services) {
-        servicesHTML += `<li data-type="service">${service.name}</li>`;
+        servicesHTML += `<li data-type='service'>${service.name}</li>`;
     }
     servicesHTML += "</ol>";
     return servicesHTML;
