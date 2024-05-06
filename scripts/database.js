@@ -2,16 +2,16 @@ const database = {
     locations: [
         {
             id: 1,
-            name: "Northeast Section",
-            mainAttraction: "Chamfort River"
+            name: "Northwest Section",
+            mainAttraction: "Lodge"
         }, {
             id: 2,
             name: "Northern Section",
             mainAttraction: "Lost Wolf Hiking Trail",
         }, {
             id: 3,
-            name: "Northwest Section",
-            mainAttraction: "Lodge",
+            name: "Northeast Section",
+            mainAttraction: "Chamfort River",
         }, {
             id: 4,
             name: "Southwest Section",
