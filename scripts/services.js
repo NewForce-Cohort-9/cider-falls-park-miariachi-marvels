@@ -22,7 +22,7 @@ const findLocationsForService = (serviceName) => {
 
     const locationNames = locations
         .filter(location => locationIds.includes(location.id))
-        .map(location => location.name);
+        .map(location => location.mainAttraction);
 
     console.log(`Locations for ${serviceName}:`, locationNames);
     return locationNames;

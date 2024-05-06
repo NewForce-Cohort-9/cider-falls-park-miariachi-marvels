@@ -2,22 +2,28 @@ const database = {
     locations: [
         {
             id: 1,
-            name: "Chamfort River"
+            name: "Northeast Section",
+            mainAttraction: "Chamfort River"
         }, {
             id: 2,
-            name: "Lost Wolf Hiking Trail",
+            name: "Northern Section",
+            mainAttraction: "Lost Wolf Hiking Trail",
         }, {
             id: 3,
-            name: "Lodge",
+            name: "Northwest Section",
+            mainAttraction: "Lodge",
         }, {
             id: 4,
-            name: "Gander River"
+            name: "Southwest Section",
+            mainAttraction: "Gander River"
         }, {
             id: 5,
-            name: "Campgrounds",
+            name: "Southern Section",
+            mainAttraction: "Campgrounds",
         }, {
             id: 6,
-            name: "Pine Bluffs Trail"
+            name: "Southeast Section",
+            mainAttraction: "Pine Bluffs Trail"
         },      
     ],
     attractions: [
