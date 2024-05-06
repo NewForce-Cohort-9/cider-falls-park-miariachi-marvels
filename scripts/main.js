@@ -8,7 +8,7 @@ const mainContainer = document.querySelector("#container")
 
 const applicationHTML = `
     <sections class="services">
-        <p>Park Services: ${Services()}</p>
+        <p><strong>PARK SERVICES:</strong> ${Services()}</p>
     </sections>
 
     <section class="container">
