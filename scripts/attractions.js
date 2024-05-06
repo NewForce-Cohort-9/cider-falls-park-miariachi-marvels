@@ -32,7 +32,7 @@ export const Attractions = () => {
     let attractionsHTML = "<ol>";
     for (const location of locations) {
         attractionsHTML += `<li
-        data-type="name"
+        data-type="mainAttraction"
         data-id="${location.id}"
         >${location.mainAttraction}</li>`
         }
