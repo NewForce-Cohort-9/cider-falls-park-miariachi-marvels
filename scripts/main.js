@@ -18,7 +18,7 @@ const applicationHTML = `
     </section>
 
     <article class="guests">
-        <h2>Current Guests</h2>
+        <h2 class="guest-title">Current Guests</h2>
         ${Guests()}
     </article>
     </section>
