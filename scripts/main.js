@@ -7,23 +7,21 @@ import { Locations } from "./locations.js"
 const mainContainer = document.querySelector("#container")
 
 const applicationHTML = `
- <sections class="services">
-        <p>Park Services: ${Services()}</p>
-        
+    <sections class="services">
+        <p><strong>PARK SERVICES:</strong> ${Services()}</p>
     </sections>
-    <article class="attractions">
+
+    <section class="container">
     <section class="list__attractions">
         <h2>Attractions</h2>
         ${Attractions()}
     </section>
 
-</article>
-
-<article class="guests">
+    <article class="guests">
         <h2>Current Guests</h2>
         ${Guests()}
-</article>
-
+    </article>
+    </section>
 `
 
 mainContainer.innerHTML = applicationHTML
