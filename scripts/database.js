@@ -3,11 +3,13 @@ const database = {
         {
             id: 1,
             name: "Northwest Section",
-            mainAttraction: "Lodge"
+            mainAttraction: "Lodge",
+            image: 'https://cdn.pixabay.com/photo/2016/03/27/19/12/nature-1283747_1280.jpg'
         }, {
             id: 2,
             name: "Northern Section",
             mainAttraction: "Lost Wolf Hiking Trail",
+            image: ''
         }, {
             id: 3,
             name: "Northeast Section",

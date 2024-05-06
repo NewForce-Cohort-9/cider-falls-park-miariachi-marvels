@@ -47,10 +47,11 @@
 
 /* .attraction-card is the Attractions HTML on attractions.js */
 .attraction-card {
-    border: 1px solid black;
+    border: 1px solid green;
     margin: 1em;
     padding: 1em;
     width: calc(33.33% - 2em);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
