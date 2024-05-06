@@ -5,6 +5,9 @@
     flex-direction: row;
 }
 
+.services ol {
+    padding-left: 5px;
+}
 
 .services li {
     list-style: none;
@@ -16,13 +19,25 @@
     color: honeydew;
 }
 
-.attractions {
-   margin: 1rem;
+.container {
+    display: flex;
+}
+
+.list__attractions {
+    margin: 1rem;
    font-size: 1rem;
+   width: 800px;
+}
+
+.list__attractions li {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
 }
 
 .guests {
    margin: 1rem;
+   width: 300px;
    display: flex;
    flex-direction: column;
    justify-content: flex-end;
