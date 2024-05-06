@@ -20,7 +20,7 @@ const attractionGuests = (id) => {
 document.addEventListener("click", (clickEvent) => {
     const itemClicked = clickEvent.target;
 
-    if (itemClicked.dataset.type === "attraction") {
+    if (itemClicked.dataset.type === "mainAttraction") {
         const attractionId = parseInt(itemClicked.dataset.id);
         const guestsCount = attractionGuests(attractionId);
         window.alert(`Number of guests visiting this attraction: ${guestsCount}`);
@@ -30,11 +30,11 @@ document.addEventListener("click", (clickEvent) => {
 
 export const Attractions = () => {
     let attractionsHTML = "<ol>";
-    for (const attraction of attractions) {
+    for (const location of locations) {
         attractionsHTML += `<li
-        data-type="attraction"
-        data-id="${attraction.id}"
-        >${attraction.name}</li>`
+        data-type="mainAttraction"
+        data-id="${location.id}"
+        >${location.mainAttraction}</li>`
         }
         attractionsHTML += "</ol>"
         return attractionsHTML
