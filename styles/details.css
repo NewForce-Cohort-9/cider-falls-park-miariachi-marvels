@@ -25,13 +25,10 @@
     display: flex;
 }
 
-/* .list__attractions is the Attractions Section on main.js */
+/* .list__atrractions is the Attractions Section on main.js */
 .list__attractions {
     margin: 1rem;
    font-size: 1rem;
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: space-between;
 }
 
 .list__attractions ol {
@@ -50,12 +47,10 @@
     border: 1px solid black;
     margin: 1em;
     padding: 1em;
-    width: calc(33.33% - 2em);
+    width: 200px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    box-sizing: border-box;
-    text-align: center;
 }
 
 /* .guests is the Guests Section on main.js */
