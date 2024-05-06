@@ -23,6 +23,7 @@
     display: flex;
 }
 
+/* list__atrractions is the Attractions Section on main.js */
 .list__attractions {
     margin: 1rem;
    font-size: 1rem;
@@ -31,8 +32,14 @@
 
 .list__attractions li {
     list-style: none;
+}
+
+/* attraction-card is the Attractions HTML on attractions.js */
+.attraction-card {
+    border: 1px solid black;
+    margin: 1em;
     display: flex;
-    flex-direction: row;
+    justify-content: space-evenly;
 }
 
 .guests {

@@ -31,10 +31,10 @@ document.addEventListener("click", (clickEvent) => {
 export const Attractions = () => {
     let attractionsHTML = "<ol>";
     for (const location of locations) {
-        attractionsHTML += `<li
-        data-type="mainAttraction"
+        attractionsHTML += `<div class="attraction-card">
+        <li data-type="mainAttraction"
         data-id="${location.id}"
-        >${location.mainAttraction}</li>`
+        >${location.mainAttraction}</li></div>`
         }
         attractionsHTML += "</ol>"
         return attractionsHTML
